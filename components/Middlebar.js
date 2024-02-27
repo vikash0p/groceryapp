@@ -16,6 +16,7 @@ const Middlebar = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     };
 
+    const[selectValue,setSelectValue]=useState("")
     return (
 
         <section className='hidden md:h-[122px]  md:w-full md:flex md:flex-row md:justify-between md:items-center md:gap-3 lg:gap-5 md:px-2 md:border-b md:border-b-[#7e7e7e] md:border-opacity-50 ' >
@@ -28,15 +29,14 @@ const Middlebar = () => {
             {/* 2.------------------searchbar------------------------------ */}
             <div className=' md:basis-[40%] bg-white border border-[#3bb77e] h-[50px]  '>
 
-                <htmlForm className=''>
+                <div className=''>
                     <div className="flex mt-3">
                         <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"></label>
                         <div>
 
                             <label htmlFor="countries" className="  text-sm font-medium "></label>
-                            <select id="countries" className=" focus:outline-none bg-transparent px-1">
-                                <option selected></option>
-                                <option defaultValue="US">All Category</option>
+                            <select id="countries"  value={selectValue} className=" focus:outline-none bg-transparent px-1" onChange={(e)=>setSelectValue(e.target.value)}>
+                                <option value="US">All Category</option>
                                 <option value="CA">Milk & daries</option>
                                 <option value="FR">petfood Toy</option>
                                 <option value="DE">Dairy</option>
@@ -55,7 +55,7 @@ const Middlebar = () => {
                             </button>
                         </div>
                     </div>
-                </htmlForm>
+                </div>
 
             </div>
             {/* ----------------------------3th--------------- */}
@@ -72,9 +72,14 @@ const Middlebar = () => {
                         <span className=''>Compare</span>
                     </Link>
                     {/* -----------------------wishlist----------------- */}
-                    <Wishlist />
+                    <Link href={'/wishlist'}>
+                        <Wishlist />
+                    </Link>
                     {/* --------------Cart comp---------------------------- */}
-                    <Cart />
+                    <Link href={'/cart'}>
+                        <Cart />
+
+                    </Link>
                     {/* -----------------------------Register------------------------- */}
 
                     <div className="relative inline-block text-left  ">

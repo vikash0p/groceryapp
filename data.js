@@ -20,7 +20,7 @@ export const link = [
     {
         items: 4,
         href: '/blog',
-        linkName: 'Home',
+        linkName: 'Blog',
     },
 
 ]

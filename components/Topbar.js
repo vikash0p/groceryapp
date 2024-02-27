@@ -9,13 +9,15 @@ const Topbar = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex + 1) % dataArray.length)
-        }, 2000);
+        }, 3000);
 
         return () => {
             clearInterval(intervalId);
         };
     }, []);
 
+    const [language, setLanguage] = useState('');
+    const [country, setCountry] = useState('')
     return (
         <section className=' hidden lg:flex lg:flex-row lg:justify-between lg:gap-4 lg:items-center lg:h-12 lg:px-1 border-b border-b-gray-300  '>
             <div className="flex-1 flex flex-row justify-between text-[#7e7e7e] ">
@@ -38,10 +40,10 @@ const Topbar = () => {
 
                 <div>
 
-                    <label htmlFor="countries" className="  text-sm font-medium "></label>
-                    <select id="countries" className=" focus:outline-none bg-transparent">
-                        <option selected>English</option>
-                        <option defaultValue="US">Hindi</option>
+                    <label htmlFor="language" className="  text-sm font-medium "></label>
+                    <select id="language" value={language} className=" focus:outline-none bg-transparent" onChange={(e) =>setLanguage(e.target.value)}>
+                        <option value="English">English</option>
+                        <option value="US">Hindi</option>
                         <option value="CA">Canada</option>
                         <option value="FR">France</option>
                         <option value="DE">Germany</option>
@@ -53,9 +55,9 @@ const Topbar = () => {
                 <div>
 
                     <label htmlFor="countries" className="  text-sm font-medium "></label>
-                    <select id="countries" className=" focus:outline-none bg-transparent">
-                        <option selected>USD</option>
-                        <option defaultValue="US">INR</option>
+                    <select id="countries" value={country} className=" focus:outline-none bg-transparent" onChange={(e)=>setCountry(e.target.value)}>
+                        <option value="USD">USD</option>
+                        <option value="US">INR</option>
                         <option value="CA">Canada</option>
 
                     </select>

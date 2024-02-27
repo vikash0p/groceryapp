@@ -100,10 +100,10 @@ const Footer = () => {
       <div>
 
 
-        <div className="w-full mt-6 mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <div className="w-full mt-6 mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between bg-gray-100">
           <span className="text-lg sm:text-center ">© 2023 <a href="/" className="hover:underline text-lg ">Grocery.pvt.Ltd™</a>. All Rights Reserved.
           </span>
-          <ul className="flex flex-row mt-6 md:mt-0 md:justify-center items-center text-3xl gap-5">
+          <ul className="flex flex-row mt-6 lg:mt-6 md:mt-0 md:justify-center items-center text-3xl gap-5">
             <li>
               <a href="#" className="mr-4 hover:underline md:mr-6 text-[#3bb77e] ">
                 <BiLogoFacebookCircle />

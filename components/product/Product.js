@@ -6,13 +6,14 @@ import React, { useState } from 'react'
 import { AiOutlineShoppingCart, AiOutlineEye } from "react-icons/ai";
 import { Model, Star } from '../index'
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePathname } from 'next/navigation'
 
 
 const Product = () => {
     const [products, setProducts] = useState("All");
     const [selected, setSelect] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    const pathname = usePathname()
     const openModal = () => {
         setIsModalOpen(true);
     };
@@ -46,7 +47,7 @@ const Product = () => {
     return (
         <div className='px-3'>
             <div className='px-5 py-8 flex flex-col md:flex-row md:justify-between items-center '>
-                <h1 className='text-2xl md:text-3xl font-semibold'>Popular Products</h1>
+                <h1 className='text-2xl md:text-3xl font-semibold'>{pathname === '/shop' ? "All Products" :"Popular Products"}</h1>
                 <div className='flex flex-col flex-wrap md:flex-row items-center gap-2 md:gap-6 text-lg font-semibold cursor-pointer'>
                     {
                         categroydata.map((value, index) => {
@@ -85,9 +86,7 @@ const Product = () => {
 
 
                                     </div>
-                                   
                                     <Model isOpen={isModalOpen} onClose={closeModal} value={value}  />
-                                       
                                     
                                     <Image src={value.imgs} className='mx-auto' alt={value.descs} width={200} height={200} priority />
                                     <div className='px-5'>
