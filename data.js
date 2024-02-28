@@ -546,14 +546,14 @@ export const product = [
 
 ]
 
-export const DealsOfDays=[
+export const DealsOfDays = [
     {
-        id:1,
-        img:'/banner/banner-5.png',
-        title:'Seeds of Change Organic Quinoa, Brown, & Red Rice',
-        price:32,
-        rating:4.5,
-        comp :'NestFood',
+        id: 1,
+        img: '/banner/banner-5.png',
+        title: 'Seeds of Change Organic Quinoa, Brown, & Red Rice',
+        price: 32,
+        rating: 4.5,
+        comp: 'NestFood',
     },
     {
         id: 2,
@@ -580,12 +580,12 @@ export const DealsOfDays=[
         comp: 'Yoplait',
     },
 ]
-export const icons=[
+export const icons = [
     {
-        id:1,
-        img:'/icon/icon-1.svg',
-        title:'Best prices & offers',
-        des:"Orders $50 or more"
+        id: 1,
+        img: '/icon/icon-1.svg',
+        title: 'Best prices & offers',
+        des: "Orders $50 or more"
     },
     {
         id: 2,
@@ -611,5 +611,32 @@ export const icons=[
         img: '/icon/icon-5.svg',
         title: 'Easy returns',
         des: "Within 30 days"
+    },
+]
+
+export const aboutPortfolio = [
+    {
+        id: 1,
+        year: '7+',
+        title: "Glorious years"
+    },
+    {
+        id: 11,
+        year: '25+',
+        title: "Happy clients"
+    },
+    {
+        id: 111,
+        year: '41+',
+        title: "Projects complete"
+    },
+    {
+        id: 1111,
+        year: '17+',
+        title: "Team advisor"
+    }, {
+        id: 11111,
+        year: '18+',
+        title: "Products Sale"
     },
 ]

@@ -1,3 +1,4 @@
+import { aboutPortfolio } from '@/data'
 import Image from 'next/image'
 import React from 'react'
 
@@ -36,7 +37,7 @@ export default function AboutHeader() {
                         width={150}
                         height={30}
                         sizes="150px"
-                        priority                 />
+                        priority />
                 </div>
             </div>
 
@@ -61,6 +62,40 @@ export default function AboutHeader() {
                     <p className='text-gray-600'>Pitatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia</p>
                 </div>
             </div>
+
+            {/* section 4 three section */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-3 py-5">
+                <div className="border border-gray-300 px-2 py-5 rounded-sm max-h-48">
+                    <h1 className='text-2xl font-bold' >Who we are</h1>
+                    <p className='text-gray-600'>Volutpat diam ut venenatis tellus in metus. Nec dui nunc mattis enim ut tellus eros donec ac odio orci ultrices in. ellus eros donec ac odio orci ultrices in.</p>
+                </div>
+                <div className="border border-gray-300 px-2 py-5 rounded-sm max-h-48">
+                    <h1 className='text-2xl font-bold' >Our history</h1>
+                    <p className='text-gray-600'>Volutpat diam ut venenatis tellus in metus. Nec dui nunc mattis enim ut tellus eros donec ac odio orci ultrices in. ellus eros donec ac odio orci ultrices in.</p>
+                </div>
+                <div className="border border-gray-300 px-2 py-5 rounded-sm max-h-48">
+                    <h1 className='text-2xl font-bold' >Our history</h1>
+                    <p className='text-gray-600'>Volutpat diam ut venenatis tellus in metus. Nec dui nunc mattis enim ut tellus eros donec ac odio orci ultrices in. ellus eros donec ac odio orci ultrices in.</p>
+                </div>
+            </div>
+            {/* section5 */}
+            <div className="py-12">
+                <div className='aboutBackgroundImage w-full rounded-lg '>
+                    <div className='w-full h-full bg-black z-20 opacity-60 flex flex-col lg:flex-row gap-9 lg:gap-1 justify-between items-center px-2 text-white'>
+                        {
+                            aboutPortfolio.map((value, indx, arr) => {
+                                return (
+                                    <div key={indx}>
+                                        <h3 className='text-8xl font-bold'>{value.year}</h3>
+                                        <h4 className='text-2xl font-bold'>{value.title} </h4>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }

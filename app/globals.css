@@ -35,3 +35,13 @@
 .backgroundColor:nth-child(11) {
   background-color: #feefea;
 }
+.aboutBackgroundImage{
+  min-height: 300px;
+  background-image: url(../public/about/about-9.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+
+
+}
