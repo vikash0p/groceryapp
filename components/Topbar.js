@@ -14,7 +14,7 @@ const Topbar = () => {
         return () => {
             clearInterval(intervalId);
         };
-    }, []);
+    }, [dataArray.length]);
 
     const [language, setLanguage] = useState('');
     const [country, setCountry] = useState('')

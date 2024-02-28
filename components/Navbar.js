@@ -17,7 +17,6 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [value, setValue] = useState('');
     const pathname = usePathname();
-    console.log("🚀 ~ file: Navbar.js:20 ~ pathname:", pathname);
     
     const dropdownVariants = {
         hidden: { opacity: 0, y: -10 },
