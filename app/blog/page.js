@@ -1,3 +1,4 @@
+import BlogComp from '@/components/blogComp/BlogComp'
 import React from 'react'
 
 export const metadata = {
@@ -9,8 +10,8 @@ export const metadata = {
 export default function blog() {
 
   return (
-    <div className='flex justify-center items-center w-full min-h-screen'>
-      Blog
+    <div className=''>
+      <BlogComp />
     </div>
   )
 }

@@ -40,7 +40,7 @@ const Product = () => {
             })
         }
 
-        if (pro) {
+        if (pro ) {
             return product.filter((item) => {
                 return pro === 'All' || item.category === pro;
             })
@@ -51,7 +51,7 @@ const Product = () => {
     }
 
     const filteredProducts = filterProductData(product, products, query)
-    
+
     const clickHander = (value, index) => {
         setProducts(value);
         setSelect(index)
