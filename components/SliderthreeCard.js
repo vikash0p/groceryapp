@@ -6,7 +6,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 
 const SliderthreeCard = ({data}) => {
-  
+
     const {ids,imgs,titles,descs,rating,prices,category}=data;
     // console.log(rating);
 
@@ -23,7 +23,7 @@ const SliderthreeCard = ({data}) => {
       <div className='px-7'>
               <h5>{titles} </h5>
               <p>{descs.substring(0, 50)} </p>
-              <Star star={rating} />
+              <Star star={rating} key={ids} />
               <div className='mt-4 '>
                   <h4 className='text-xl text-[#3bb77e]  '>${prices} </h4>
                   <div className='flex mt-3 absolute left-2 right-2 bottom-8 group hover:bg-orange-400 transition duration-150 ease-in flex-row justify-center items-center gap-2 bg-[#3bb77e] text-white text-xl px-3 py-2 rounded-md  cursor-pointer'>
@@ -33,7 +33,7 @@ const SliderthreeCard = ({data}) => {
 
               </div>
       </div>
-      
+
     </div>
   )
 }

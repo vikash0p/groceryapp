@@ -22,11 +22,11 @@ const Topbar = () => {
         <section className=' hidden lg:flex lg:flex-row lg:justify-between lg:gap-4 lg:items-center lg:h-12 lg:px-1 border-b border-b-gray-300  '>
             <div className="flex-1 flex flex-row justify-between text-[#7e7e7e] ">
                 <Link href={"/"} >About Us</Link>
-                <vr className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
+                <div className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
                 <Link href={"/"} >My Account</Link>
-                <vr className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
+                <div className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
                 <Link href={"/"} >whitlist</Link>
-                <vr className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
+                <div className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
                 <Link href={"/"} >Order Tracking</Link>
             </div>
             <div className=" md:flex-none lg:flex-1   ">
@@ -36,7 +36,7 @@ const Topbar = () => {
             </div>
             <div className="flex-1 flex flex-row justify-between items-center gap-3 text-[#7e7e7e]">
                 <div>Need help? Call Us: <span className='text-[#3bb77e]'>+1800 900</span></div>
-                <vr className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
+                <div className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
 
                 <div>
 
@@ -50,7 +50,7 @@ const Topbar = () => {
                     </select>
 
                 </div>
-                <vr className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
+                <div className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
 
                 <div>
 

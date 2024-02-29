@@ -22,7 +22,7 @@ const DealOfDays = () => {
 
                                 <div className='absolute -bottom-32  p-8 shadow-2xl rounded-2xl left-3 right-3 bg-white'>
                                     <h1 className='text-lg font-semibold'>{value.titles} </h1>
-                                    <Star star={value.rating} />
+                                    <Star star={value.rating} key={value.ids} />
                                     <div className='flex h-[36px] flex-row justify-between items-center mt-5'>
                                         <h4 className='text-xl text-[#3bb77e]  '>${value.prices} </h4>
                                         <div className='flex group hover:bg-orange-400 transition duration-150 ease-in flex-row items-center gap-2 bg-[#3bb77e] text-white text-base px-3 py-1 rounded-md  cursor-pointer'>

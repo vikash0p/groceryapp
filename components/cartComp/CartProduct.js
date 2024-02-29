@@ -38,15 +38,15 @@ export default function CartProduct() {
                         <div className='w-full min-h-screen flex gap-4'>
                             <div className=" basis-[75%] ">
 
-                                <table class="table-auto min-w-full " >
+                                <table className="table-auto min-w-full " >
                                     <thead>
                                         <tr>
-                                            <th class="px-4 py-2">Image</th>
-                                            <th class="px-4 py-2">Title</th>
-                                            <th class="px-4 py-2">Description</th>
-                                            <th class="px-4 py-2">Quantity</th>
-                                            <th class="px-4 py-2">Price</th>
-                                            <th class="px-4 py-2">Remove</th>
+                                            <th className="px-4 py-2">Image</th>
+                                            <th className="px-4 py-2">Title</th>
+                                            <th className="px-4 py-2">Description</th>
+                                            <th className="px-4 py-2">Quantity</th>
+                                            <th className="px-4 py-2">Price</th>
+                                            <th className="px-4 py-2">Remove</th>
                                         </tr>
                                     </thead>
                                     {
@@ -54,10 +54,10 @@ export default function CartProduct() {
                                             return (
                                                 <tbody key={value.id}>
                                                     <tr className='ps-1'>
-                                                        <td class="border px-4 py-2"><Image src={value.img} alt={value.title} width={100} height={100} className="h-28 w-28 object-cover" /></td>
-                                                        <td class="border px-4 py-2">{value.title} </td>
-                                                        <td class="border px-4 py-2 ">{`${value.desc.substring(0, 30)}...`} </td>
-                                                        <td class="border px-4 py-2">
+                                                        <td className="border px-4 py-2"><Image src={value.img} alt={value.title} width={100} height={100} className="h-28 w-28 object-cover" /></td>
+                                                        <td className="border px-4 py-2">{value.title} </td>
+                                                        <td className="border px-4 py-2 ">{`${value.desc.substring(0, 30)}...`} </td>
+                                                        <td className="border px-4 py-2">
                                                             <div className=' flex justify-between gap-1'>
                                                                 <button type="button "
                                                                     className={`text-2xl bg-red-600 w-8 h-8 text-white ${value.qty <= 1 ? "bg-red-200" : ""}`}
@@ -71,9 +71,9 @@ export default function CartProduct() {
                                                                 >+</button>
                                                             </div>
                                                         </td>
-                                                        <td class="border px-4 py-2">$ {value.price}</td>
-                                                        <td class="border px-4 py-2">
-                                                            <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={() => {
+                                                        <td className="border px-4 py-2">$ {value.price}</td>
+                                                        <td className="border px-4 py-2">
+                                                            <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={() => {
                                                                 dispatch(removeToCart(value.id))
                                                             }}>Remove</button>
                                                         </td>
@@ -87,37 +87,37 @@ export default function CartProduct() {
                             </div>
                             <div className="basis-[25%] h-screen bg-slate-600 text-white px-2 ">
                                 <h2 className='text-2xl font-semibold '>Summary</h2>
-                                <div class="overflow-x-auto">
-                                    <table class="table-auto min-w-full mt-3">
+                                <div className="overflow-x-auto">
+                                    <table className="table-auto min-w-full mt-3">
 
                                         <tbody>
-                                            <tr class="bg-gray-400 text-black">
-                                                <td class="border px-4 py-2">SubTotal</td>
-                                                <td class="border px-4 py-2">${TotalPrice} </td>
+                                            <tr className="bg-gray-400 text-black">
+                                                <td className="border px-4 py-2">SubTotal</td>
+                                                <td className="border px-4 py-2">${TotalPrice} </td>
                                             </tr>
-                                            <tr class="bg-gray-800 text-white">
-                                                <td class="border px-4 py-2">Sales Tax</td>
-                                                <td class="border px-4 py-2">$0.00</td>
+                                            <tr className="bg-gray-800 text-white">
+                                                <td className="border px-4 py-2">Sales Tax</td>
+                                                <td className="border px-4 py-2">$0.00</td>
                                             </tr>
-                                            <tr class="bg-gray-400 text-black">
-                                                <td class="border px-4 py-2"> total Items</td>
-                                                <td class="border px-4 py-2">{product.length} </td>
+                                            <tr className="bg-gray-400 text-black">
+                                                <td className="border px-4 py-2"> total Items</td>
+                                                <td className="border px-4 py-2">{product.length} </td>
                                             </tr>
-                                            <tr class="bg-gray-800 text-white">
-                                                <td class="border px-4 py-2">total Quantity</td>
-                                                <td class="border px-4 py-2">{totalQuantity} </td>
+                                            <tr className="bg-gray-800 text-white">
+                                                <td className="border px-4 py-2">total Quantity</td>
+                                                <td className="border px-4 py-2">{totalQuantity} </td>
                                             </tr>
                                         </tbody>
 
                                     </table>
                                 </div>
                                 <div className='w-full h-[2px] bg-gray-950 my-5'></div>
-                                <table class="table-auto min-w-full my-3">
+                                <table className="table-auto min-w-full my-3">
 
                                     <tbody>
-                                        <tr class="bg-gray-400 text-black">
-                                            <td class="border px-4 py-2">Grand total</td>
-                                            <td class="border px-4 py-2">${TotalPrice} </td>
+                                        <tr className="bg-gray-400 text-black">
+                                            <td className="border px-4 py-2">Grand total</td>
+                                            <td className="border px-4 py-2">${TotalPrice} </td>
                                         </tr>
 
                                     </tbody>

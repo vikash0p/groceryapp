@@ -43,7 +43,7 @@ const Middlebar = () => {
                             </select>
 
                         </div>
-                        <vr className='w-[1px] h-4  ms-2 mt-1 inline-block bg-[#7e7e7e]' />
+                        <div className='w-[1px] h-4  ms-2 mt-1 inline-block bg-[#7e7e7e]' />
 
                         <div className="relative w-full -mt-2">
                             <input type="search" id="search-dropdown" className="block p-2.5 w-full z-20 text-sm text-black bg-transparent focus: outline-none " placeholder="Search htmlFor items" required />

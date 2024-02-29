@@ -30,7 +30,7 @@ export default function ProductItem({ value }) {
                 <h5 className='text-gray-400'>{value.titles} </h5>
                 <h5 className=''>{value.category} </h5>
                 <h1 className='font-semibold hover:text-[#3bb77e]  '>{value.descs.substring(0, 50)} </h1>
-                <Star star={rating} />
+                <Star star={rating} key={value.ids} />
                 <div className='flex flex-row justify-between items-center mt-8'>
                     <h4 className=' text-[#3bb77e]  '>$ {value.prices} </h4>
                     {/* <div className='flex group hover:bg-orange-400 transition duration-150 ease-in flex-row items-center gap-2 bg-[#3bb77e] text-white text-base px-3 py-1 rounded-md  cursor-pointer'>

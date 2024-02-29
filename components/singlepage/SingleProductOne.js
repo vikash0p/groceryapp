@@ -6,6 +6,7 @@ import Star from '../product/Star'
 import ProductItem from '../product/ProductItem'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '@/redux-toolkit/slice/CartSlice'
+import { addToWishlist } from '@/redux-toolkit/slice/WishlistSlice'
 
 export default function SingleProductOne({ params }) {
     const dispatch=useDispatch();
@@ -41,7 +42,7 @@ export default function SingleProductOne({ params }) {
                                         <p className='text-gray-600'>{item.descs} </p>
                                         <p className='text-xl'><span >Price :</span> $ {item.prices} </p>
                                         <p className='text-xl'><span >Category :</span> {item.category} </p>
-                                        <Star star={item.rating} />
+                                        <Star star={item.rating} key={item.ids} />
                                         <div className='flex justify-between'>
                                             <button type="button" className='px-3 py-1 bg-green-700 text-white rounded-sm hover:bg-orange-600 transition-colors  duration-300 ease-linear' onClick={()=>{
                                                 return dispatch(addToCart({
@@ -54,7 +55,17 @@ export default function SingleProductOne({ params }) {
                                                     qty:1,
                                                 }))
                                             }}>Add to cart</button>
-                                            <button type="button" className='px-3 py-1 bg-green-700 text-white rounded-sm hover:bg-orange-600 transition-colors  duration-300 ease-linear'>Wishlist</button>
+                                            <button type="button" className='px-3 py-1 bg-green-700 text-white rounded-sm hover:bg-orange-600 transition-colors  duration-300 ease-linear' onClick={() => {
+                                                return dispatch(addToWishlist({
+                                                    id: item.ids,
+                                                    img: item.imgs,
+                                                    title: item.titles,
+                                                    desc: item.descs,
+                                                    category: item.category,
+                                                    price: item.prices,
+                                                    qty: 1,
+                                                }))
+                                            }}>Wishlist</button>
                                         </div>
                                     </div>
                                 </div>
