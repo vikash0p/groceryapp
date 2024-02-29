@@ -10,7 +10,7 @@ const AllIcons = () => {
                 icons.map((value) => {
                     return (
                         <div key={value.id} className='bg-[#f4f6fa] w-full h-32 p-8 flex flex-row justify-between items-center gap-3 rounded-2xl '>
-                            <Image src={value.img} alt={value.title} width={70} height={70} priority />
+                            <Image src={value.imgs} alt={value.title} width={70} height={70} priority />
                             <div>
                                 <h3 className='text-lg font-semibold'>{value.title} </h3>
                                 <h3 className='text-[#adadad] '>{value.des} </h3>
