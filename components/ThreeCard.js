@@ -13,7 +13,7 @@ const ThreeCard = () => {
         threedata.map((value) => {
           return (
             <div key={value.id} className="w-full h-64 relative   ">
-              <Image src={value.img} alt={value.title} className='object-cover rounded-xl' fill priority />
+              <Image src={value.imgs} alt={value.title} className='object-cover rounded-xl' fill priority />
               <div className='group'>
                 <h1 className=' absolute top-12 left-12 text-2xl w-1/2 font-semibold transition ease-in duration-200  group-hover:text-green-500 group-hover:-translate-y-3'>{value.title} </h1>
                 <div className='bg-[#3bb77e] absolute bottom-12 left-12 flex flex-row transition ease-in duration-200  group-hover:bg-orange-400 rounded-sm justify-center items-center   h-7 px-3'>
