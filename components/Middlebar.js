@@ -101,14 +101,14 @@ const Middlebar = () => {
                                 variants={dropdownVariants}
                                 className=" py-1  origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50" role="menu" aria-orientation="vertical" aria-labelledby="options-menu" onMouseLeave={() => setIsOpen1(!true)}  >
 
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                <Link href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
                                     My Accout
-                                </a>
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> Order Traking</a>
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> My Voucher</a>
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> My wishlist</a>
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> Setting </a>
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> SignOut</a>
+                                </Link>
+                                <Link href="/checkout" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> Order Traking</Link>
+                                <Link href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> My Voucher</Link>
+                                <Link href="/wishlist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> My wishlist</Link>
+                                <Link href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> Setting </Link>
+                                <Link href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"> SignOut</Link>
 
 
                             </motion.div>

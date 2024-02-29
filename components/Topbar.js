@@ -21,17 +21,17 @@ const Topbar = () => {
     return (
         <section className=' hidden lg:flex lg:flex-row lg:justify-between lg:gap-4 lg:items-center lg:h-12 lg:px-1 border-b border-b-gray-300  '>
             <div className="flex-1 flex flex-row justify-between text-[#7e7e7e] ">
-                <Link href={"/"} >About Us</Link>
+                <Link href={"/about"} >About Us</Link>
                 <div className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
                 <Link href={"/"} >My Account</Link>
                 <div className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
-                <Link href={"/"} >whitlist</Link>
+                <Link href={"/wishlist"} >wishlist</Link>
                 <div className='w-[1px] h-4  mt-1 inline-block bg-[#7e7e7e]' />
-                <Link href={"/"} >Order Tracking</Link>
+                <Link href={"/checkout"} >Order Tracking</Link>
             </div>
             <div className=" md:flex-none lg:flex-1   ">
 
-                <h3 className='text-center transition-all transhtmlForm 2s ease-in text-[#7e7e7e] font-semibold'>{dataArray[currentIndex]}</h3>
+                <h3 className='text-center transition-all transform 2s ease-in text-[#7e7e7e] font-semibold'>{dataArray[currentIndex]}</h3>
 
             </div>
             <div className="flex-1 flex flex-row justify-between items-center gap-3 text-[#7e7e7e]">
