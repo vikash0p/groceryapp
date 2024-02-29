@@ -2,6 +2,7 @@
 import { Middlebar, MobileNavbar, Navbar, Topbar,GoToTop } from '@/components'
 import './globals.css'
 import { Quicksand } from 'next/font/google'
+import ReduxProvider from '@/redux-toolkit/ReduxProvider'
 
 
 const quicksand = Quicksand({
@@ -38,12 +39,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" >
       <body className={`${quicksand.className} scroll-smooth transition ease-linear duration-500 `} >
-        <Topbar />
-        <Middlebar />
-        <Navbar />
-        <MobileNavbar />
-        <main>{children}</main>
-        <GoToTop />
+        <ReduxProvider>
+          <Topbar />
+          <Middlebar />
+          <Navbar />
+          <MobileNavbar />
+          <main>{children}</main>
+          <GoToTop />
+        </ReduxProvider>
+
       </body>
     </html>
   )

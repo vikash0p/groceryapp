@@ -1,10 +1,14 @@
+'use client'
 import { DealsOfDays, product } from '@/data'
 import Image from 'next/image'
 import React from 'react'
 import Star from '../product/Star'
 import ProductItem from '../product/ProductItem'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart } from '@/redux-toolkit/slice/CartSlice'
 
 export default function SingleProductOne({ params }) {
+    const dispatch=useDispatch();
     console.log(params);
     const productData = product.filter((value) => value.ids === params);
     const dealsData = DealsOfDays.filter((value) => value.ids === params);
@@ -39,8 +43,18 @@ export default function SingleProductOne({ params }) {
                                         <p className='text-xl'><span >Category :</span> {item.category} </p>
                                         <Star star={item.rating} />
                                         <div className='flex justify-between'>
-                                            <button type="button" className='px-3 py-1 bg-gray-700 text-white rounded-sm hover:bg-orange-600 transition-colors  duration-300 ease-linear'>Add to cart</button>
-                                            <button type="button" className='px-3 py-1 bg-gray-700 text-white rounded-sm hover:bg-orange-600 transition-colors  duration-300 ease-linear'>Wishlist</button>
+                                            <button type="button" className='px-3 py-1 bg-green-700 text-white rounded-sm hover:bg-orange-600 transition-colors  duration-300 ease-linear' onClick={()=>{
+                                                return dispatch(addToCart({
+                                                    id:item.ids,
+                                                    img:item.imgs,
+                                                    title:item.titles,
+                                                    desc:item.descs,
+                                                    category:item.category,
+                                                    price:item.prices,
+                                                    qty:1,
+                                                }))
+                                            }}>Add to cart</button>
+                                            <button type="button" className='px-3 py-1 bg-green-700 text-white rounded-sm hover:bg-orange-600 transition-colors  duration-300 ease-linear'>Wishlist</button>
                                         </div>
                                     </div>
                                 </div>
