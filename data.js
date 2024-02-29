@@ -27,39 +27,39 @@ export const link = [
 export const cat = [
     {
         items: 6071,
-        img: '/cat/cat-1.png',
+        imgs: '/cat/cat-1.png',
         title: 'Vegetables',
         id: "fddTZb4nahFYU"
     },
     {
         items: 4371,
-        img: '/cat/cat-2.png',
+        imgs: '/cat/cat-2.png',
         title: 'Strowberry',
         id: "AjumIrKAZqQ1EQQ"
 
     },
     {
         items: 2181,
-        img: '/cat/cat-3.png',
+        imgs: '/cat/cat-3.png',
         title: 'Snack',
         id: "lP071prtE3O1jfTsPY"
     },
     {
         items: 5611,
-        img: '/cat/cat-4.png',
+        imgs: '/cat/cat-4.png',
         title: 'Black Plum',
         id: "UMg6bX2dK7xWo690p6Bh"
     },
 
     {
         items: 3061,
-        img: '/cat/cat-5.png',
+        imgs: '/cat/cat-5.png',
         title: 'Custard Apple',
         id: "jw6Vpmi5xq"
     },
     {
         items: 4721,
-        img: '/cat/cat-9.png',
+        imgs: '/cat/cat-9.png',
         title: 'Red Apple',
         id: "N5OtAcmI"
 
@@ -67,35 +67,35 @@ export const cat = [
 
     {
         items: 3281,
-        img: '/cat/cat-11.png',
+        imgs: '/cat/cat-11.png',
         title: 'peach',
         id: "CeYpcAfDhcqROQIb"
 
     },
     {
         items: 1381,
-        img: '/cat/cat-12.png',
+        imgs: '/cat/cat-12.png',
         title: 'Organic Kiwi',
         id: "LiI2jGrs"
 
     },
     {
         items: 4061,
-        img: '/cat/cat-13.png',
+        imgs: '/cat/cat-13.png',
         title: 'Cake & Milk',
         id: "CTVqeRCQMZKGNe9sWK"
 
     },
     {
         items: 1861,
-        img: '/cat/cat-14.png',
+        imgs: '/cat/cat-14.png',
         title: 'Coffe & Tea',
         id: "DwdkT5Mb8B"
 
     },
     {
         items: 1811,
-        img: '/cat/cat-15.png',
+        imgs: '/cat/cat-15.png',
         title: 'Headphone',
         id: "qPT5jmUNGECvn78lfz"
 
@@ -106,20 +106,20 @@ export const cat = [
 export const threedata = [
     {
         id: 1,
-        img: '/banner/banner-1.png',
+        imgs: '/banner/banner-1.png',
         title: 'Everyday Fresh & Clean with Our Products',
 
     },
     {
         id: 2,
-        img: '/banner/banner-2.png',
+        imgs: '/banner/banner-2.png',
         title: 'Make your Breakfast Healthy and Easy',
 
 
     },
     {
         id: 3,
-        img: '/banner/banner-3.png',
+        imgs: '/banner/banner-3.png',
         title: 'The best Organic Products Online',
 
 
@@ -129,7 +129,7 @@ export const threedata = [
 export const slider = [
     {
         id: 1,
-        img: ''
+        imgs: ''
     }
 ]
 export const media = [
@@ -548,67 +548,71 @@ export const product = [
 
 export const DealsOfDays = [
     {
-        id: 1,
-        img: '/banner/banner-5.png',
-        title: 'Seeds of Change Organic Quinoa, Brown, & Red Rice',
-        price: 32,
+        ids: '1',
+        imgs: '/banner/banner-5.png',
+        titles: 'Seeds of Change Organic Quinoa, Brown, & Red Rice',
+        prices: 32,
         rating: 4.5,
-        comp: 'NestFood',
+        category: 'NestFood',
+        descs: 'shade triangle certain stay sister store step worried dish current wheat flat right two strip faster truth tongue younger beat daughter instant clock loss',
     },
     {
-        id: 2,
-        img: '/banner/banner-6.png',
-        title: 'Perdue Simply Smart Organics Gluten Free',
-        price: 24,
+        ids: '2',
+        imgs: '/banner/banner-6.png',
+        titles: 'Perdue Simply Smart Organics Gluten Free',
+        prices: 24,
         rating: 3.5,
-        comp: 'Old El Paso',
+        category: 'NestFood',
+        descs: 'shade triangle certain stay sister store step worried dish current wheat flat right two strip faster truth tongue younger beat daughter instant clock loss',
     },
     {
-        id: 3,
-        img: '/banner/banner-7.png',
-        title: 'Signature Wood-Fired Mushroom and Caramelized',
-        price: 12,
+        ids: '3',
+        imgs: '/banner/banner-7.png',
+        titles: 'Signature Wood-Fired Mushroom and Caramelized',
+        prices: 12,
         rating: 4.5,
-        comp: 'Progresso',
+        category: 'NestFood',
+        descs: 'shade triangle certain stay sister store step worried dish current wheat flat right two strip faster truth tongue younger beat daughter instant clock loss',
     },
     {
-        id: 4,
-        img: '/banner/banner-8.png',
-        title: 'Simply Lemonade with Raspberry Juice',
-        price: 16,
+        ids: '4',
+        imgs: '/banner/banner-8.png',
+        titles: 'Simply Lemonade with Raspberry Juice',
+        prices: 16,
         rating: 3.5,
-        comp: 'Yoplait',
+        category: 'NestFood',
+        descs: 'shade triangle certain stay sister store step worried dish current wheat flat right two strip faster truth tongue younger beat daughter instant clock loss',
     },
 ]
 export const icons = [
     {
         id: 1,
-        img: '/icon/icon-1.svg',
+        imgs: '/icon/icon-1.svg',
         title: 'Best prices & offers',
         des: "Orders $50 or more"
     },
     {
         id: 2,
-        img: '/icon/icon-2.svg',
+        imgs: '/icon/icon-2.svg',
         title: 'Free delivery',
         des: "24/7 amazing services"
     },
     {
         id: 3,
-        img: '/icon/icon-3.svg',
+        imgs: '/icon/icon-3.svg',
         title: 'Great daily deal',
         des: "When you sign up"
     },
 
     {
         id: 4,
-        img: '/icon/icon-4.svg',
+        imgs: '/icon/icon-4.svg',
         title: 'Wide assortment',
         des: "Mega Discounts"
     },
     {
         id: 5,
-        img: '/icon/icon-5.svg',
+        imgs: '/icon/icon-5.svg',
         title: 'Easy returns',
         des: "Within 30 days"
     },

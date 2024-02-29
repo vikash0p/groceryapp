@@ -1,15 +1,25 @@
-import { product } from '@/data'
+import { DealsOfDays, product } from '@/data'
 import Image from 'next/image'
 import React from 'react'
 import Star from '../product/Star'
 import ProductItem from '../product/ProductItem'
 
 export default function SingleProductOne({ params }) {
+    console.log(params);
+    const productData = product.filter((value) => value.ids === params);
+    const dealsData = DealsOfDays.filter((value) => value.ids === params);
+
+    // Combine the filtered arrays
+    const combinedData = [...productData, ...dealsData];
+    // console.log("🚀 ~ file: SingleProductOne.js:14 ~ combinedData:", combinedData);
+
+    const combinationFullData=[...product,...DealsOfDays]
+    // console.log("🚀 ~ file: SingleProductOne.js:17 ~ combinationFullData:", combinationFullData);
     return (
         <div className="">
             <div className='max-w-5xl mx-auto'>
                 {
-                    product.filter((value) => value.ids === params).map((item) => {
+                    combinedData.length > 0 && combinedData.map((item) => {
                         return (
                             <div key={item.ids} className=''>
                                 <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -29,9 +39,8 @@ export default function SingleProductOne({ params }) {
                                         <p className='text-xl'><span >Category :</span> {item.category} </p>
                                         <Star star={item.rating} />
                                         <div className='flex justify-between'>
-                                            <button type="button" className='px-3 py-1 bg-gray-700 text-white rounded-sm'>Add to cart</button>
-                                            <button type="button" className='px-3 py-1 bg-gray-700 text-white rounded-sm'>Wishlist</button>
-
+                                            <button type="button" className='px-3 py-1 bg-gray-700 text-white rounded-sm hover:bg-orange-600 transition-colors  duration-300 ease-linear'>Add to cart</button>
+                                            <button type="button" className='px-3 py-1 bg-gray-700 text-white rounded-sm hover:bg-orange-600 transition-colors  duration-300 ease-linear'>Wishlist</button>
                                         </div>
                                     </div>
                                 </div>
@@ -39,9 +48,10 @@ export default function SingleProductOne({ params }) {
                                 <h1 className='text-4xl font-semibold pt-20 pb-10'>Similar Products</h1>
                                 <div className='grid w-full min-h-screen grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 '>
                                     {
-                                        product.filter((value)=>value.category === item.category).map((item)=>{
-                                            return(
-                                               <ProductItem key={item.ids} value={item} />
+
+                                        combinationFullData.filter((value) => value.category === item.category).map((item) => {
+                                            return (
+                                                <ProductItem key={item.ids} value={item} />
                                             )
                                         })
                                     }

@@ -17,6 +17,8 @@ import 'swiper/css/autoplay'
 import { Pagination, Navigation,Autoplay } from 'swiper/modules';
 import { product } from '@/data'
 import SliderthreeCard from '../SliderthreeCard'
+import Link from 'next/link'
+import ProductItem from '../product/ProductItem'
 
 
 
@@ -34,7 +36,7 @@ const SliderThree = () => {
         <div className='absolute top-[15%] w-[70%] left-8 group '>
           <h1 className='text-5xl font-bold group-hover:text-orange-400'>Bring nature into your room.</h1>
           <div className='bg-[#3bb77e] mt-11 w-32 flex flex-row transition ease-in duration-200  group-hover:bg-orange-400 rounded-sm justify-center items-center   h-8 px-3'>
-            <button type="button" className='  text-white font-semibold text-sm text rounded-md '>shop Now  </button>
+            <Link href='/shop' className='  text-white font-semibold text-sm text rounded-md '>shop Now  </Link>
             <BsArrowRightShort className='text-white font-semibold text-lg transition ease-in duration-200 group-hover:translate-x-1' />
           </div>
 
@@ -43,7 +45,7 @@ const SliderThree = () => {
 
       <div className='md:basis-3/4  w-[100%] md:w-[66%] m-auto h-[480px] '>
         <Swiper
-         
+
           loop={true}
           pagination={{
             type: 'fraction',
@@ -82,24 +84,26 @@ const SliderThree = () => {
               slidesPerView: 4,
               spaceBetween: 20,
             },
-            
+
           }}
           className="mySwiper w-full h-full"
         >
-          {
-            product.map((value, index, array) => {
-              return (
-                <SwiperSlide key={value.id} className='w-full h-full  '>
-                  <SliderthreeCard  data={value} />
-                </SwiperSlide>
-              )
-            })
-          }
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+              {
+                product.slice(0,12).map((value, index, array) => {
+                  return (
+                    <SwiperSlide key={value.id} className='w-full h-full  '>
+                      <ProductItem value={value} />
+                    </SwiperSlide>
+                  )
+                })
+              }
+          </div>
           <div className={`swiper-button-prev ${styles.buttonPrev}`}></div>
           <div className={`swiper-button-next ${styles.buttonNext}`}></div>
           {/* <div className={`swiper-pagination ${styles.pagination}`}></div> */}
         </Swiper>
-       
+
       </div>
     </div>
     </>

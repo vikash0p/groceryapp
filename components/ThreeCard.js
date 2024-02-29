@@ -3,6 +3,8 @@ import { threedata } from '@/data'
 import Image from 'next/image';
 // console.log(threedata);
 import { BsArrowRightShort } from 'react-icons/bs';
+import Link from 'next/link';
+
 
 const ThreeCard = () => {
   return (
@@ -15,7 +17,7 @@ const ThreeCard = () => {
               <div className='group'>
                 <h1 className=' absolute top-12 left-12 text-2xl w-1/2 font-semibold transition ease-in duration-200  group-hover:text-green-500 group-hover:-translate-y-3'>{value.title} </h1>
                 <div className='bg-[#3bb77e] absolute bottom-12 left-12 flex flex-row transition ease-in duration-200  group-hover:bg-orange-400 rounded-sm justify-center items-center   h-7 px-3'>
-                  <button type="button" className='  text-white font-semibold text-sm text rounded-md '>shop Now  </button>
+                  <Link href={"/shop"} className='  text-white font-semibold text-sm text rounded-md '>shop Now  </Link>
                   <BsArrowRightShort className='text-white font-semibold text-lg transition ease-in duration-200 group-hover:translate-x-1' />
                 </div>
 
