@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import {AiOutlineClose} from 'react-icons/ai';
 
-const Model = ({ isOpen, onClose,  }) => {
+const Model = ({ isOpen, onClose, value  }) => {
     return (
         <AnimatePresence>
             {isOpen && (
@@ -17,7 +17,7 @@ const Model = ({ isOpen, onClose,  }) => {
                         <button type="button" className='absolute top-3 right-5 text-2xl p-3 bg-[#3bb77e] rounded-full text-white ' onClick={onClose}><AiOutlineClose/> </button>
                     </div>
                     <div className='p-5 mt-12  flex flex-col  gap-5 justify-center items-center'>
-                        <Image src={"/product/product-1-1.jpg"} alt='images' width={300} height={300} />
+                        <Image src={value.imgs} alt='images' width={300} height={300} />
                         <h1 className='text-2xl font-semibold'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti adipisci atque eum totam, a commodi accusantium molestiae reiciendis minima eius, tenetur, doloribus sit voluptates incidunt corporis cumque vel recusandae. Aut.</h1>
                     </div>
 
