@@ -16,7 +16,12 @@ const Footer = () => {
       <div className='flex   px-3 flex-col gap-4 md:flex-row'>
         <div className='basis-[25%]'>
           <div className='relative w-36 h-11 md:w-[215px] md:h-16 '>
-            <Image src="/logo/logo.svg" alt='logo' fill />
+            <Image
+              src="/logo/logo.svg"
+              alt='logo'
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
           <address className='flex flex-col gap-5 mt-5 not-italic' >
             <h3 className='flex flex-row items-center'> <CiLocationOn className='text-green-700 text-xl' /> <span className='text-lg font-semibold px-2'>Address:</span> Faridabd Haryana, 12003</h3>
@@ -87,13 +92,31 @@ const Footer = () => {
         <div className='flex flex-col gap-3'>
           <p className='text-lg font-black'>From App Store or Google Play</p>
           <div className='flex flex-row gap-3'>
-            <Image src={"/google-play.jpg"} alt='google store' width={128} height={42} />
-            <Image src={"/app-store.jpg"} alt='google store' width={128} height={42} />
+            <Image
+              src={"/google-play.jpg"}
+              alt='google store'
+              width={128}
+              height={42}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+            <Image
+              src={"/app-store.jpg"}
+              alt='google store'
+              width={128}
+              height={42}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         </div>
         <div className='flex flex-col gap-3'>
           <h1 className='text-lg font-black'>Secured Payment Gateways</h1>
-          <Image src={"/payment-method.png"} alt='google store' width={224} height={32} />
+          <Image
+            src={"/payment-method.png"}
+            alt='google store'
+            width={224}
+            height={32}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
 
         </div>
       </div>

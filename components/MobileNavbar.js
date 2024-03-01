@@ -25,7 +25,13 @@ const OffCanvasMenu = () => {
             <div className='flex flex-row justify-between gap-2 px-2 sm:ps-6 items-center border-b border-b-gray-300 shadow-md  w-full h-[72px] md:hidden' >
                 <button className=" text-2xl  rounded-md  " onClick={toggleMenu} > <RxHamburgerMenu /> </button>
                 <Link href={"/"}>
-                    <Image src={"/logo/logo.svg"} alt='logo' width={132} height={24} />
+                    <Image
+                        src={"/logo/logo.svg"}
+                        alt='logo'
+                        width={132}
+                        height={24}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                 </Link>
                 <div className='flex flex-row items-center'>
                     <Wishlist />

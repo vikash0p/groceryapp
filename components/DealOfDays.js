@@ -18,7 +18,14 @@ const DealOfDays = () => {
                     DealsOfDays.map((value) => {
                         return (
                             <div key={value.ids} className="w-full h-64 relative mb-32 xl:mb-0 last:mb-0  ">
-                                <Image src={value.imgs} alt={value.titles} className='object-cover rounded-xl' fill priority />
+                                <Image
+                                    src={value.imgs}
+                                    alt={value.titles}
+                                    className='object-cover rounded-xl'
+                                    fill
+                                    priority
+                                    sizes="(min-width: 1280px) calc(25vw - 18px), (min-width: 1040px) 33.18vw, (min-width: 640px) calc(50vw - 20px), calc(100vw - 24px)"
+                                />
 
                                 <div className='absolute -bottom-32  p-8 shadow-2xl rounded-2xl left-3 right-3 bg-white'>
                                     <h1 className='text-lg font-semibold'>{value.titles} </h1>

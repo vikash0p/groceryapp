@@ -20,7 +20,13 @@ const Cart = () => {
 
                     className=" px-4 py-2">
                     <div className="relative inline-flex items-center  text-sm font-medium text-center text-white rounded-l" >
-                        <Image src={"/logo/icon-cart.svg"} alt='icon ' width={25} height={25} />
+                        <Image
+                            src={"/logo/icon-cart.svg"}
+                            alt='icon '
+                            width={25}
+                            height={25}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
                         <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs  text-white bg-[#3bb77e] border-2 border-white rounded-full -top-3 -right-3 ">{cartProduct.length}</div>
                     </div>
                     <span className='sr-only'>Cart</span>

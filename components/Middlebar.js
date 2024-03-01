@@ -16,14 +16,20 @@ const Middlebar = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     };
 
-    const[selectValue,setSelectValue]=useState("")
+    const [selectValue, setSelectValue] = useState("")
     return (
 
         <section className='hidden md:h-[122px]  md:w-full md:flex md:flex-row md:justify-between md:items-center md:gap-3 lg:gap-5 md:px-2 md:border-b md:border-b-[#7e7e7e] md:border-opacity-50 ' >
             {/* 1.--------- logo-------------------- */}
             <div className=' md:basis-[15%] '>
                 <Link href={"/"}>
-                    <Image src={"/logo/logo.svg"} alt='logo' width={182} height={62} />
+                    <Image
+                        src={"/logo/logo.svg"}
+                        alt='logo'
+                        width={182}
+                        height={62}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                 </Link>
             </div>
             {/* 2.------------------searchbar------------------------------ */}
@@ -35,7 +41,7 @@ const Middlebar = () => {
                         <div>
 
                             <label htmlFor="countries" className="  text-sm font-medium "></label>
-                            <select id="countries"  value={selectValue} className=" focus:outline-none bg-transparent px-1" onChange={(e)=>setSelectValue(e.target.value)}>
+                            <select id="countries" value={selectValue} className=" focus:outline-none bg-transparent px-1" onChange={(e) => setSelectValue(e.target.value)}>
                                 <option value="US">All Category</option>
                                 <option value="CA">Milk & daries</option>
                                 <option value="FR">petfood Toy</option>
@@ -64,7 +70,13 @@ const Middlebar = () => {
                 <div className=" flex flex-row justify-between h-full items-center text-[#7e7e7e] ">
                     <Link href={"/"} >
                         <div className="relative inline-flex items-center  w-6 h-6 text-sm font-medium text-center text-white rounded-l" >
-                            <Image src={"/logo/icon-compare.svg"} alt='icon ' width={25} height={25} />
+                            <Image
+                                src={"/logo/icon-compare.svg"}
+                                alt='icon '
+                                width={25}
+                                height={25}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
                             <span></span>
                             <span className="sr-only">Notifications</span>
                             <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs  text-white bg-[#3bb77e] border-2 border-white rounded-full -top-3 -right-3 ">3</div>

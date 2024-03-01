@@ -25,7 +25,15 @@ export default function ProductItem({ value }) {
                                                 <Image src={"/logo/icon-compare.svg"} alt='icon ' width={25} height={25} />
                                             </div>
                                             <Model isOpen={isModalOpen} onClose={closeModal} value={value} /> */}
-            <Image src={value.imgs} className='mx-auto' alt={value.descs} width={200} height={200} priority />
+            <Image
+                src={value.imgs}
+                className='mx-auto object-contain'
+                alt={value.descs}
+                width={200}
+                height={200}
+                priority
+                sizes="200px"
+            />
             <div className='px-5'>
                 <h5 className='text-gray-400'>{value.titles} </h5>
                 <h5 className=''>{value.category} </h5>
