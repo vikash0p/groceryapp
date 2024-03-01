@@ -22,6 +22,17 @@ export const link = [
         href: '/blog',
         linkName: 'Blog',
     },
+    {
+        items: 5,
+        href: '/login',
+        linkName: 'Login',
+    },
+    {
+        items: 4,
+        href: '/register',
+        linkName: 'Register',
+    },
+
 
 ]
 export const cat = [
